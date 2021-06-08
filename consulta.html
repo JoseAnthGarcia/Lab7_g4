@@ -23,6 +23,17 @@
 			$("#img2").hide();
 		});
 		
+		$("form").submit(function(event){
+			event.preventDefault();
+			var dni = $("#dni_input").val();
+			if(dni.length==8 && parseInt(dni)){
+				alert("exitoso");
+				return;
+			}else{
+				$("#dni_input").addClass("dni_input_error");
+				$("#error").show();
+			}
+		});
 	
 		
 	});
@@ -37,8 +48,9 @@
 		
 		<h1 class="titulo">Consulta tu lugar de votacion y si eres miembro de mesa</h1>
 		
-		<form>
-			<input id="dni_input" type="text"/>
+		<form action="resultado.html" method="POST">
+			<input id="dni_input" type="text"/>	
+			<p id="error" class="error_message" style="display:none">El DNI ingresado no es valido</p>
 			<button class="button" type="submit" id="consultar">Consultar</button>
 		</form>
 	</div>

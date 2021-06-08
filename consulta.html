@@ -9,39 +9,60 @@
   <link rel="stylesheet" type="text/css" href="css/consulta.css">
   <link rel="stylesheet" type="text/css" href="css/common.css">
   <link rel="stylesheet" type="text/css" href="css/resultado.css">
-  
+
   <script>
 	$(document).ready(function(){
-		
+
 		$("#img1").click(function(){
 			$("#img2").toggle();
 			$("#img1").hide();
 		});
-		
+
 		$("#img2").click(function(){
 			$("#img1").toggle();
 			$("#img2").hide();
 		});
-		
-	
-		
+
+
+
 	});
   </script>
-  
+
 </head>
-	
-<body  style="background: #15265c;">
-	<div class="container">
-		<img src="img/onpe1.jpg" class="img_onpe" id="img1"/>
-		<img src="img/onpe2.svg" class="img_onpe" id="img2" style="display:none; width=40"/>
-		
-		<h1 class="titulo">Consulta tu lugar de votacion y si eres miembro de mesa</h1>
-		
-		<form>
-			<input id="dni_input" type="text"/>
-			<button class="button" type="submit" id="consultar">Consultar</button>
-		</form>
-	</div>
+
+<body  style="background: #15265c;" >
+<div align="center">
+  <div class="container"  style="flex-direction: column; box-sizing: border-box; display: flex; flex: 1 1 100%; max-width: 50%;"  >
+    <div class="form-container" style="justify-content: center; align-items: center;" align="center">
+      <div class="row">
+        <img src="img/onpe1.jpg" class="img_onpe" id="img1"/>
+        <img src="img/onpe2.svg" class="img_onpe" id="img2" style="display:none; width: 90%;"/>
+      </div>
+
+      <div class="row">
+        <h1 class="titulo">Consulta tu lugar de votacion y si eres miembro de mesa</h1>
+        <hr width=100%  align="right" color="white">
+      </div>
+      <div class="row" >
+        <form  class="form-container" style="justify-content: center; align-items: center; flex-direction: column; max-width: 50%;" >
+          <input id="dni_input" type="text"/>
+          <button class="button" type="submit" id="consultar">Consultar</button>
+        </form>
+
+
+      </div>
+
+    </div>
+
+
+
+
+
+
+  </div>
+
+</div>
+
 </body>
 
 </html>

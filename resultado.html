@@ -21,10 +21,10 @@
 			var indexApellido1 = Math.floor(Math.random()*10);
 			var indexApellido2 = Math.floor(Math.random()*10);
 			var indexLocal = Math.floor(Math.random()*6);
-			//var numero = Math.floor(Math.random()*6);
+			var numero = Math.floor(Math.random()*900)+100;
 			$("#nombre").html(nombres[indexNombre]+" "+apellidos[indexApellido1]+" "+apellidos[indexApellido2]);
-			$("#local").html(nombres[indexNombre]);
-			$("#nombre").html(nombres[indexNombre]);
+			$("#local").html(locales[indexLocal]);
+			$("#mesa").html(numero);
 		};
 		
 		$("#mieMes").mouseenter(function(){

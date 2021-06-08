@@ -5,10 +5,67 @@
   <meta charset="utf-8">
   <title>Resultado</title>
   <script src="js/vendor.js" ></script>
+  <script src="js/resultado.js" ></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/consulta.css">
+  <link rel="stylesheet" type="text/css" href="css/common.css">
+  <link rel="stylesheet" type="text/css" href="css/resultado.css">
+  
+  <script>
+	$(document).ready(function(){
+		
+		llenarDatos();
+	
+		function llenarDatos(){
+			var indexNombre = Math.floor(Math.random()*10);
+			var indexApellido1 = Math.floor(Math.random()*10);
+			var indexApellido2 = Math.floor(Math.random()*10);
+			var indexLocal = Math.floor(Math.random()*6);
+			//var numero = Math.floor(Math.random()*6);
+			$("#nombre").html(nombres[indexNombre]+" "+apellidos[indexApellido1]+" "+apellidos[indexApellido2]);
+			$("#local").html(nombres[indexNombre]);
+			$("#nombre").html(nombres[indexNombre]);
+		};
+		
+		$("#mieMes").mouseenter(function(){
+			//miembroMesa=0 <- no es miembro de mesa | miembroMesa=1 <- miembro de mesa
+			var miembroMesa = Math.floor(Math.random()*2);
+			if(miembroMesa==1){
+				var indexCargo = Math.floor(Math.random()*6);
+				var cargo = cargos[indexCargo];
+				var contenido = "<h1 class='card-title'>Cargo:</h1><p class='card-data'>"+cargo+"</p>";
+				$("#cargo").html("Usted sí es miembro de mesa");
+				$("#mieMes").append(contenido);
+			}else{
+				$("#cargo").html("Usted no es miembro de mesa");
+			}
+		});
+		
+		
+		
+		
+	});
+  </script>
 </head>
 
 <body>
+	<div class="cointerner">
+		<h1 class="titulo">Resultado de consulta de local de votacion y miembro de mesa</h1>
+		<div class="card">
+			<h1 class="card-title">Nombre</h1>
+			<p class="card-data" id="nombre">NombreExample</p>
+			
+			<h1 class="card-title">Local de Votación</h1>
+			<p class="card-data" id="local">LocalExample</p>
+			
+			<h1 class="card-title">Mesa</h1>
+			<p class="card-data" id="mesa">MesaExample</p>
+		</div>
+		<div class="card" id="mieMes">
+			<h1 class="card-title" id="cargo">Pase el mouse encima para conocer si es miembro de mesa</h1>
+		</div>
+		<a class="button" href="consulta.html">Regresar</a>
+	</div>
 
 </body>
 

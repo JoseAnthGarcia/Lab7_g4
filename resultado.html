@@ -41,7 +41,11 @@
 			}
 		});
 		
-		
+		$("#mieMes").mouseleave(function(){
+			$("#mieMes").empty();
+			var contenido = "<h1 class='card-title' id='cargo'>Pase el mouse encima para conocer si es miembro de mesa</h1>";
+			$("#mieMes").html(contenido);
+		});
 		
 		
 	});

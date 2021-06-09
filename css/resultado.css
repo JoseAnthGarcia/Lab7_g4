@@ -3,13 +3,21 @@
   justify-content: center;
   text-align: center;
 }
+.margen{
+	margin-top: 2.5rem;
+	
+}
+.margen2{
+	margin-bottom: 2.5rem;
+	
+}
 
 .card {
   width: 30vw;
   height: 60vh;
   background: white;
   margin: 1rem;
-  display: flex;
+  
   align-items: center;
   justify-content: center;
 }
@@ -21,14 +29,14 @@
 .card-data {
   margin-top: auto;
   margin-bottom: auto;
-  padding: 1rem;
+  
 }
 
 .card-title {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: bold;
   color: #1616a3;
-  margin-top: 1rem;
+  margin: 0;
 }
 
 .card-text {
